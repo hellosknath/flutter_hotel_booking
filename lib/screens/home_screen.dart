@@ -159,3 +159,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+// Emergency leave neowar somoy surhid vaiya or others kaowk ba kono important
+// project er kaj takle leave nischen j ayta akto notify kore diyen...
