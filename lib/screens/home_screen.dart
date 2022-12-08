@@ -5,6 +5,7 @@ import 'package:flutter_booking_app/screens/ticket_view.dart';
 import 'package:flutter_booking_app/utils/app_info_list.dart';
 import 'package:flutter_booking_app/utils/app_layout.dart';
 import 'package:flutter_booking_app/utils/app_styles.dart';
+import 'package:flutter_booking_app/widget/double_text_widget.dart';
 import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -79,26 +80,11 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Gap(AppLayout.getHeight(40)),
                 // heading
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Upcoming Flights',
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        print('You are tapped');
-                      },
-                      child: Text(
-                        'View all',
-                        style: Styles.textStyle.copyWith(
-                          color: Styles.primaryColor,
-                        ),
-                      ),
-                    ),
-                  ],
+                const AppDoubleTextWidget(
+                  bigTxt: 'Upcoming Flights',
+                  smallTxt: 'View all',
                 ),
+
                 // ticket view
                 Gap(AppLayout.getHeight(15)),
                 SingleChildScrollView(
@@ -120,25 +106,9 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Hotels',
-                        style: Styles.headLineStyle2,
-                      ),
-                      InkWell(
-                        onTap: () {
-                          print('You are tapped');
-                        },
-                        child: Text(
-                          'View all',
-                          style: Styles.textStyle.copyWith(
-                            color: Styles.primaryColor,
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: const AppDoubleTextWidget(
+                    bigTxt: 'Hotels',
+                    smallTxt: 'View All',
                   ),
                 ),
                 Gap(AppLayout.getHeight(15)),
