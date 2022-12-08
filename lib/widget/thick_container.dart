@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_booking_app/utils/app_layout.dart';
 
 class ThickContainer extends StatelessWidget {
   const ThickContainer({super.key});
@@ -6,10 +7,10 @@ class ThickContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(3.0),
+      padding: EdgeInsets.all(AppLayout.getHeight(3)),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(width: 2.5,color: Colors.white),
+        borderRadius: BorderRadius.circular(AppLayout.getHeight(20)),
+        border: Border.all(width: AppLayout.getWidth(2.5), color: Colors.white),
       ),
     );
   }
